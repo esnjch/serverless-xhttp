@@ -53,18 +53,18 @@ func init() {
 
 // load config
 func loadConfig() *Config {
-	uuid := getEnv("UUID", "a2056d0d-c98e-4aeb-9aab-37f64edd5710")  // UUID,哪吒v1依赖UUID
-	nezhaServer := getEnv("NEZHA_SERVER", "")    // 哪吒v1形式：nezha.xxx.com:8008  哪吒v0形式：nezha.xxx.com
-	nezhaPort := getEnv("NEZHA_PORT", "")        // 哪吒v1请留空,哪吒v0的agent端口
-	nezhaKey := getEnv("NEZHA_KEY", "")          // 哪吒v1的NZ_CLIENT_SECRET或哪吒v0的agent密钥
-	subPath := getEnv("SUB_PATH", "e7f2a9b4c8d1e0f362a5b8d9c1e0f7a2")         // 节点订阅token
-	name := getEnv("NAME", "")                   // 节点名称
-	port := getEnv("PORT", "3000")               // 监听端口
-	domain := getEnv("DOMAIN", "")               // 服务域名
+	uuid := getEnv("UUID", "b4f8a2c1-6e9d-4c3b-8a5f-1d2e9b4c0d7a")
+	nezhaServer := getEnv("NEZHA_SERVER", "")
+	nezhaPort := getEnv("NEZHA_PORT", "")
+	nezhaKey := getEnv("NEZHA_KEY", "")
+	subPath := getEnv("SUB_PATH", "e7f2a9b4c8d1e0f362a5b8d9c1e0f7a2")
+	name := getEnv("NAME", "imageai")
+	port := getEnv("PORT", "3000")
+	domain := getEnv("DOMAIN", "jincheng121-imageai.hf.space")
 
 	xpath := getEnv("XPATH", uuid[:8])
 	autoAccess := false
-	if getEnv("AUTO_ACCESS", "false") == "true" {  // 是否开启自动保活,true开启,false关闭,默认关闭
+	if getEnv("AUTO_ACCESS", "false") == "true" {
 		autoAccess = true
 	}
 	
@@ -80,7 +80,7 @@ func loadConfig() *Config {
 		Port:        port,
 		ChunkSize:   32768,
 		AutoAccess:  autoAccess,
-		LogLevel:    getEnv("LOG_LEVEL", "none"), // 日志等级 none, info, debug, warn, error
+		LogLevel:    getEnv("LOG_LEVEL", "none"),
 	}
 }
 
