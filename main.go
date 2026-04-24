@@ -537,7 +537,7 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 	
 	var port string
 	var security string
-	if config.Domain != "" && config.Port == "3000" {
+	if config.Domain != "" && config.Port == "9877" {
 		port = "443"
 		security = "tls"
 	} else {
