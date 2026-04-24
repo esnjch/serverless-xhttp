@@ -58,9 +58,9 @@ func loadConfig() *Config {
 	nezhaPort := getEnv("NEZHA_PORT", "")
 	nezhaKey := getEnv("NEZHA_KEY", "")
 	subPath := getEnv("SUB_PATH", "e7f2a9b4c8d1e0f362a5b8d9c1e0f7a2")
-	name := getEnv("NAME", "imageai")
+	name := getEnv("NAME", "")
 	port := getEnv("PORT", "3000")
-	domain := getEnv("DOMAIN", "jincheng121-imageai.hf.space")
+	domain := getEnv("DOMAIN", "")
 
 	xpath := getEnv("XPATH", uuid[:8])
 	autoAccess := false
